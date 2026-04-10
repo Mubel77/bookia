@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Libros - Bookia</title>
+<link rel="stylesheet" href="./styles/libros.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container header-content">
+        <img src="./public/logo.jpeg" alt="Bookia Logo" class="logo">
+
+        <button class="hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./libros.html">Libros</a></li>
+                <li><a href="./resenas.html">Reseñas</a></li>
+                <li><a href="./autores.html">Autores</a></li>
+                <li><a href="./index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+document.getElementById('menuToggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en un link
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.getElementById('menu').classList.remove('active');
+        document.getElementById('menuToggle').classList.remove('active');
+    });
+});
+</script>
+
+<section class="hero-libros">
+    <div class="container">
+        <h1>Nuestros Libros</h1>
+        <p>Descubre una colección completa de libros para todos los gustos</p>
+    </div>
+</section>
+
+<section class="filtros container">
+    <h2>Filtrar por categoría</h2>
+    <div class="filtros-buttons">
+        <button class="filtro-btn active" onclick="filtrarLibros('todos')">Todos</button>
+        <button class="filtro-btn" onclick="filtrarLibros('ficcion')">Ficción</button>
+        <button class="filtro-btn" onclick="filtrarLibros('misterio')">Misterio</button>
+        <button class="filtro-btn" onclick="filtrarLibros('romance')">Romance</button>
+        <button class="filtro-btn" onclick="filtrarLibros('aventura')">Aventura</button>
+        <button class="filtro-btn" onclick="filtrarLibros('fantasia')">Fantasía</button>
+    </div>
+</section>
+
+<section class="libros-container container">
+    <div class="libros-grid">
+        <!-- Libro 1 -->
+        <div class="libro-card" data-categoria="fantasia">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="El nombre del viento">
+            </div>
+            <div class="libro-contenido">
+                <h3>El nombre del viento</h3>
+                <p class="autor">Patrick Rothfuss</p>
+                <p class="descripcion">Una historia épica llena de magia, aventuras y misterio que sigue la vida de Kvothe, un talentoso mago que relata su extraordinaria historia.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Fantasía</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 2 -->
+        <div class="libro-card" data-categoria="ficcion">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="1984">
+            </div>
+            <div class="libro-contenido">
+                <h3>1984</h3>
+                <p class="autor">George Orwell</p>
+                <p class="descripcion">Una novela distópica que explora el control social y la vigilancia extrema en un futuro sombrío donde el gobierno controla todo.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Ficción</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 3 -->
+        <div class="libro-card" data-categoria="misterio">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="El código Da Vinci">
+            </div>
+            <div class="libro-contenido">
+                <h3>El código Da Vinci</h3>
+                <p class="autor">Dan Brown</p>
+                <p class="descripcion">Una emocionante aventura de misterio y secretos junto a Robert Langdon, quien descubre conspiraciones ocultas en el arte antiguo.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Misterio</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 4 -->
+        <div class="libro-card" data-categoria="romance">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="Orgullo y prejuicio">
+            </div>
+            <div class="libro-contenido">
+                <h3>Orgullo y prejuicio</h3>
+                <p class="autor">Jane Austen</p>
+                <p class="descripcion">Un clásico de la literatura que cuenta la historia de Elizabeth Bennet y Mr. Darcy en una sociedad donde el amor y las convenciones sociales chocan.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Romance</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 5 -->
+        <div class="libro-card" data-categoria="aventura">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="La isla del tesoro">
+            </div>
+            <div class="libro-contenido">
+                <h3>La isla del tesoro</h3>
+                <p class="autor">Robert Louis Stevenson</p>
+                <p class="descripcion">Una aventura clásica de piratas y tesoros escondidos que sigue a Jim Hawkins en su emocionante viaje por los mares en busca de riquezas.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Aventura</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 6 -->
+        <div class="libro-card" data-categoria="fantasia">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="Harry Potter">
+            </div>
+            <div class="libro-contenido">
+                <h3>Harry Potter y la Piedra Filosofal</h3>
+                <p class="autor">J.K. Rowling</p>
+                <p class="descripcion">El inicio de la saga que revolucionó la literatura infantil, donde un joven mago descubre un mundo mágico lleno de misterios y peligros.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Fantasía</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 7 -->
+        <div class="libro-card" data-categoria="ficcion">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="Cien años de soledad">
+            </div>
+            <div class="libro-contenido">
+                <h3>Cien años de soledad</h3>
+                <p class="autor">Gabriel García Márquez</p>
+                <p class="descripcion">Una obra maestra de la literatura latinoamericana que narra la historia de varias generaciones de la familia Buendía en el pueblo ficticio de Macondo.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Ficción</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 8 -->
+        <div class="libro-card" data-categoria="misterio">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="Sherlock Holmes">
+            </div>
+            <div class="libro-contenido">
+                <h3>El perro de los Baskerville</h3>
+                <p class="autor">Arthur Conan Doyle</p>
+                <p class="descripcion">Una novela de misterio clásica donde Sherlock Holmes investiga la maldición de la familia Baskerville en los páramos de Devon.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Misterio</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Libro 9 -->
+        <div class="libro-card" data-categoria="romance">
+            <div class="libro-imagen">
+                <img src="./public/recomedables.jpg" alt="Jane Eyre">
+            </div>
+            <div class="libro-contenido">
+                <h3>Jane Eyre</h3>
+                <p class="autor">Charlotte Brontë</p>
+                <p class="descripcion">La historia apasionante de una joven independiente que lucha por su libertad y amor en la sociedad victoriana, enfrentando enormes obstáculos.</p>
+                <div class="libro-footer">
+                    <span class="categoria-tag">Romance</span>
+                    <a href="./resenas.html" class="btn-resena">Ver reseña</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bookia</h3>
+                <p>Tu mundo de lectura online</p>
+                <p>Email: contacto@bookia.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" class="social-icon">📷 Instagram</a>
+                    <a href="https://facebook.com" target="_blank" class="social-icon">👍 Facebook</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Suscribirse</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo" required>
+                    <button type="submit">Suscribir</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bookia - Tu mundo de lectura online. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function filtrarLibros(categoria) {
+    const tarjetas = document.querySelectorAll('.libro-card');
+    const botones = document.querySelectorAll('.filtro-btn');
+    
+    botones.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    tarjetas.forEach(tarjeta => {
+        if(categoria === 'todos' || tarjeta.dataset.categoria === categoria) {
+            tarjeta.style.display = 'block';
+            setTimeout(() => {
+                tarjeta.classList.add('visible');
+            }, 10);
+        } else {
+            tarjeta.style.display = 'none';
+            tarjeta.classList.remove('visible');
+        }
+    });
+}
+
+// Mostrar todos los libros al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.libro-card').forEach(tarjeta => {
+        tarjeta.classList.add('visible');
+    });
+});
+</script>
+
+</body>
+</html>

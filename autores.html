@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autores - Bookia</title>
+<link rel="stylesheet" href="./styles/autores.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container header-content">
+        <img src="./public/logo.jpeg" alt="Bookia Logo" class="logo">
+
+        <button class="hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./libros.html">Libros</a></li>
+                <li><a href="./resenas.html">Reseñas</a></li>
+                <li><a href="./autores.html">Autores</a></li>
+                <li><a href="./index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+document.getElementById('menuToggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en un link
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.getElementById('menu').classList.remove('active');
+        document.getElementById('menuToggle').classList.remove('active');
+    });
+});
+</script>
+
+<section class="hero-autores">
+    <div class="container">
+        <h1>Nuestros Autores</h1>
+        <p>Conoce a los grandes escritores y sus obras maestras</p>
+    </div>
+</section>
+
+<section class="autores-container container">
+    <div class="autores-lista">
+        <!-- Autor 1 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="Patrick Rothfuss" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>Patrick Rothfuss</h2>
+                    <p class="nacionalidad">🌎 Estados Unidos</p>
+                </div>
+            </div>
+            <p class="descripcion">Patrick Rothfuss es un aclamado escritor norteamericano conocido por su serie "The Kingkiller Chronicles", que combina fantasía épica con aventuras mágicas cautivantes. Sus historias destacan por su escritura poética y personajes profundamente desarrollados.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>El nombre del viento</li>
+                    <li>El miedo del hombre sabio</li>
+                    <li>Relatos de la Taberna del Camino</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Autor 2 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="George Orwell" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>George Orwell</h2>
+                    <p class="nacionalidad">🌎 Reino Unido</p>
+                </div>
+            </div>
+            <p class="descripcion">George Orwell fue un escritor inglés de gran influencia que exploró temas de política, justicia social y distopía. Sus obras continúan siendo referencias fundamentales en la literatura moderna y en la crítica social.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>1984</li>
+                    <li>Granja de animales</li>
+                    <li>Rebelión en la granja</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Autor 3 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="Dan Brown" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>Dan Brown</h2>
+                    <p class="nacionalidad">🌎 Estados Unidos</p>
+                </div>
+            </div>
+            <p class="descripcion">Dan Brown es un bestseller internacional conocido por sus novelas de misterio y suspenso. Sus libros combinan elementos históricos, religiosos y artísticos con tramas complejas que mantienen a los lectores en vilo.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>El código Da Vinci</li>
+                    <li>Ángeles y demonios</li>
+                    <li>La fortaleza digital</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Autor 4 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="Jane Austen" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>Jane Austen</h2>
+                    <p class="nacionalidad">🌎 Reino Unido</p>
+                </div>
+            </div>
+            <p class="descripcion">Jane Austen fue una novelista inglesa clásica que revolucionó el género romántico. Sus obras están llenas de humor, crítica social y romances cautivadores que siguen siendo bellos y relevantes después de más de dos siglos.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>Orgullo y prejuicio</li>
+                    <li>Emma</li>
+                    <li>Sentido y sensibilidad</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Autor 5 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="Robert Louis Stevenson" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>Robert Louis Stevenson</h2>
+                    <p class="nacionalidad">🌎 Escocia</p>
+                </div>
+            </div>
+            <p class="descripcion">Robert Louis Stevenson fue un escritor escocés que dejó un legado de aventureros, piratas y personajes memorables. Su prosa vivida y sus tramas emocionantes han inspirado innumerables adaptaciones y continúan fascinar a lectores de todas las edades.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>La isla del tesoro</li>
+                    <li>El extraño caso del Dr. Jekyll y Mr. Hyde</li>
+                    <li>Sécuestro</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Autor 6 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="J.K. Rowling" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>J.K. Rowling</h2>
+                    <p class="nacionalidad">🌎 Reino Unido</p>
+                </div>
+            </div>
+            <p class="descripcion">J.K. Rowling, autora británica, revolucionó la literatura infantil con su serie de Harry Potter. Su universo mágico y personajes entrañables han cautivado a millones de lectores alrededor del mundo, ganando reconocimiento global.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>Harry Potter y la Piedra Filosofal</li>
+                    <li>Harry Potter y la Cámara Secreta</li>
+                    <li>Harry Potter y el Prisionero de Azkaban</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Autor 7 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="Gabriel García Márquez" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>Gabriel García Márquez</h2>
+                    <p class="nacionalidad">🌎 Colombia</p>
+                </div>
+            </div>
+            <p class="descripcion">Gabriel García Márquez fue un autor latinoamericano de renombre mundial, ganador del Premio Nobel de Literatura. Su estilo del "realismo mágico" mezcla elementos fantásticos con la realidad cotidiana de forma única y profunda.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>Cien años de soledad</li>
+                    <li>El amor en los tiempos de cólera</li>
+                    <li>Vivir para contarla</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- Autor 8 -->
+        <article class="autor-card">
+            <div class="autor-header">
+                <img src="./public/recomedables.jpg" alt="Arthur Conan Doyle" class="autor-imagen">
+                <div class="autor-info">
+                    <h2>Arthur Conan Doyle</h2>
+                    <p class="nacionalidad">🌎 Reino Unido</p>
+                </div>
+            </div>
+            <p class="descripcion">Arthur Conan Doyle fue creador del famoso detective Sherlock Holmes, personaje que revolucionó la novela de misterio. Sus historias de deducción lógica y detectives inteligentes continúan siendo modelo para generaciones de escritores.</p>
+            <div class="libros-autor">
+                <h3>Obras destacadas:</h3>
+                <ul>
+                    <li>El perro de los Baskerville</li>
+                    <li>Estudio en escarlata</li>
+                    <li>Las aventuras de Sherlock Holmes</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bookia</h3>
+                <p>Tu mundo de lectura online</p>
+                <p>Email: contacto@bookia.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" class="social-icon">📷 Instagram</a>
+                    <a href="https://facebook.com" target="_blank" class="social-icon">👍 Facebook</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Suscribirse</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo" required>
+                    <button type="submit">Suscribir</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bookia - Tu mundo de lectura online. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

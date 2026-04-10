@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reseñas - Bookia</title>
+<link rel="stylesheet" href="./styles/resenas.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container header-content">
+        <img src="./public/logo.jpeg" alt="Bookia Logo" class="logo">
+
+        <button class="hamburguesa" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./libros.html">Libros</a></li>
+                <li><a href="./resenas.html">Reseñas</a></li>
+                <li><a href="./autores.html">Autores</a></li>
+                <li><a href="./index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+document.getElementById('menuToggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en un link
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.getElementById('menu').classList.remove('active');
+        document.getElementById('menuToggle').classList.remove('active');
+    });
+});
+</script>
+
+<section class="hero-resenas">
+    <div class="container">
+        <h1>Reseñas de Libros</h1>
+        <p>Opiniones y críticas de nuestros lectores sobre los mejores libros</p>
+    </div>
+</section>
+
+<section class="resenas-container container">
+    <h2>Últimas reseñas</h2>
+
+    <div class="resenas-lista">
+        <!-- Reseña 1 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>El nombre del viento</h3>
+                    <p class="autor">Patrick Rothfuss</p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐ (5/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"Una obra maestra de la fantasía épica. Patrick Rothfuss crea un mundo mágico inmersivo con un protagonista fascinante. La prosa es hermosa, la trama envolvente y el misticismo bien manejado. Un imprescindible para cualquier amante de la fantasía."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por María García</span>
+                <span class="resena-fecha">15 de Marzo, 2026</span>
+            </div>
+        </article>
+
+        <!-- Reseña 2 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>1984</h3>
+                    <p class="autor">George Orwell</p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐ (5/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"Un clásico perturbador y profundamente relevante. Orwell presenta una distopía aterradora que nos hace reflexionar sobre el poder, la vigilancia y el control. Aunque oscura, es absolutamente necesaria su lectura en estos tiempos."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por Carlos López</span>
+                <span class="resena-fecha">12 de Marzo, 2026</span>
+            </div>
+        </article>
+
+        <!-- Reseña 3 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>El código Da Vinci</h3>
+                    <p class="autor">Dan Brown</p>
+                    <div class="estrellas">⭐⭐⭐⭐ (4/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"Una novela emocionante de misterio y suspenso. Dan Brown teje una trama compleja que mantiene el suspenso desde el primer capítulo. Los giros son sorprendentes y la investigación absorbe completamente. Altamente recomendado para lectores que disfrutan de intriga."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por Ana Martínez</span>
+                <span class="resena-fecha">10 de Marzo, 2026</span>
+            </div>
+        </article>
+
+        <!-- Reseña 4 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>Orgullo y prejuicio</h3>
+                    <p class="autor">Jane Austen</p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐ (5/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"Una novela romántica clásica que sigue siendo hermosa y cautivadora. Austen teje el romance de Elizabeth y Darcy de forma magistral, combinando humor, sátira social y sentimientos genuinos. Es un viaje atemporal que todo lector debe experimentar."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por Sofia Ruiz</span>
+                <span class="resena-fecha">8 de Marzo, 2026</span>
+            </div>
+        </article>
+
+        <!-- Reseña 5 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>La isla del tesoro</h3>
+                    <p class="autor">Robert Louis Stevenson</p>
+                    <div class="estrellas">⭐⭐⭐⭐ (4/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"Una aventura clásica que despierta la imaginación. Stevenson crea un mundo de piratas y misterio que atrapa desde las primeras páginas. El viaje hacia la isla del tesoro es emocionante y lleno de giros inesperados. Perfecto para lectores de todas las edades."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por Juan Pérez</span>
+                <span class="resena-fecha">5 de Marzo, 2026</span>
+            </div>
+        </article>
+
+        <!-- Reseña 6 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>Harry Potter y la Piedra Filosofal</h3>
+                    <p class="autor">J.K. Rowling</p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐ (5/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"El inicio de una saga legendaria. Rowling presenta un mundo mágico vibrante y personajes memorables. La atmósfera de Hogwarts es cautivadora y los misterios mantienen la atención. Aunque dirigida al público infantil, es disfrutada por lectores de todas las edades."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por Laura González</span>
+                <span class="resena-fecha">2 de Marzo, 2026</span>
+            </div>
+        </article>
+
+        <!-- Reseña 7 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>Cien años de soledad</h3>
+                    <p class="autor">Gabriel García Márquez</p>
+                    <div class="estrellas">⭐⭐⭐⭐⭐ (5/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"Una obra de genio literario. García Márquez teje una narrativa hipnotizante llena de "realismo mágico". Las múltiples generaciones de la familia Buendía cobran vida con una profundidad extraordinaria. Requiere concentración pero la recompensa es una experiencia literaria transformadora."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por Miguel Torres</span>
+                <span class="resena-fecha">28 de Febrero, 2026</span>
+            </div>
+        </article>
+
+        <!-- Reseña 8 -->
+        <article class="resena-card">
+            <div class="resena-header">
+                <img src="./public/recomedables.jpg" alt="Libro">
+                <div class="resena-info">
+                    <h3>El perro de los Baskerville</h3>
+                    <p class="autor">Arthur Conan Doyle</p>
+                    <div class="estrellas">⭐⭐⭐⭐ (4/5)</div>
+                </div>
+            </div>
+            <p class="resena-texto">"Un misterio clásico perfectamente tejido. Conan Doyle mantiene el suspense a lo largo de toda la novela con pistas inteligentes y giros sorprendentes. Sherlock Holmes es tan brillante como siempre, y el misterio de la maldición de los Baskerville es profundamente intrigante."</p>
+            <div class="resena-footer">
+                <span class="resena-autor">Por Elena Rodríguez</span>
+                <span class="resena-fecha">25 de Febrero, 2026</span>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section class="escribir-resena container">
+    <h2>Comparte tu reseña</h2>
+    <form class="resena-form">
+        <div class="form-group">
+            <label for="titulo-libro">Título del libro:</label>
+            <input type="text" id="titulo-libro" name="titulo-libro" required>
+        </div>
+        <div class="form-group">
+            <label for="autor-libro">Autor:</label>
+            <input type="text" id="autor-libro" name="autor-libro" required>
+        </div>
+        <div class="form-group">
+            <label for="tu-nombre">Tu nombre:</label>
+            <input type="text" id="tu-nombre" name="tu-nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="calificacion">Calificación (1-5 estrellas):</label>
+            <select id="calificacion" name="calificacion" required>
+                <option>Selecciona una calificación</option>
+                <option>⭐ (1/5)</option>
+                <option>⭐⭐ (2/5)</option>
+                <option>⭐⭐⭐ (3/5)</option>
+                <option>⭐⭐⭐⭐ (4/5)</option>
+                <option>⭐⭐⭐⭐⭐ (5/5)</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="tu-resena">Tu reseña:</label>
+            <textarea id="tu-resena" name="tu-resena" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Publicar reseña</button>
+    </form>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bookia</h3>
+                <p>Tu mundo de lectura online</p>
+                <p>Email: contacto@bookia.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" class="social-icon">📷 Instagram</a>
+                    <a href="https://facebook.com" target="_blank" class="social-icon">👍 Facebook</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Suscribirse</h3>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo" required>
+                    <button type="submit">Suscribir</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Bookia - Tu mundo de lectura online. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
