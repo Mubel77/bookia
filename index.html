@@ -5,19 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bookia - Tu mundo de lectura online</title>
 <link rel="stylesheet" href="./styles/index.css">
+<link name="theme-color" rel="icon" type="image/png" sizes="200x200" href="./public/icons02.png">
+<script src="https://kit.fontawesome.com/76e1d0d53e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <header>
     <div class="container header-content">
-        <img src="./public/logo.jpeg" alt="Bookia Logo" class="logo">
+        <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
 
-        <button class="hamburguesa" id="menuToggle">
+        <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
+        <label for="menuToggle" class="hamburguesa" aria-label="Abrir menú">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </label>
 
         <nav id="menu">
             <ul>
@@ -31,26 +34,10 @@
     </div>
 </header>
 
-<script>
-document.getElementById('menuToggle').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-    this.classList.toggle('active');
-});
-
-// Cerrar menú al hacer clic en un link
-document.querySelectorAll('#menu a').forEach(link => {
-    link.addEventListener('click', function() {
-        document.getElementById('menu').classList.remove('active');
-        document.getElementById('menuToggle').classList.remove('active');
-    });
-});
-</script>
-
-<section class="hero">
-    <div class="container">
-        <h1>Descubre tu próxima lectura</h1>
-        <p>Explora libros, reseñas y recomendaciones personalizadas</p>
+<section class="hero fondo-imagen-hero">
+    <div class="container overlay-hero">
+        <h1>Descubre tu próxima lectura Explora libros,</h1>
+        <p>reseñas y recomendaciones personalizadas</p>
         <a href="./libros.html"><button>Explorar libros</button></a>
     </div>
 </section>
@@ -60,23 +47,23 @@ document.querySelectorAll('#menu a').forEach(link => {
 
     <div class="cards">
         <article class="card">
-            <img src="./public/libros.jpg" alt="Explorar libros">
-            <h3>Explorar libros</h3>
-            <p>Descubre libros por categoría y estilo literario.</p>
+            <img src="./public/libros02.jpg" alt="Explorar libros">
+            <h3 class="coloText">Explorar libros</h3>
+            <p class="coloText">Descubre libros por categoría y estilo literario.</p>
             <a href="./libros.html" class="card-link">Ver libros</a>
         </article>
 
         <article class="card">
-            <img src="./public/reseñas.jpg" alt="Leer reseñas">
-            <h3>Leer reseñas</h3>
-            <p>Opiniones reales antes de elegir tu próxima lectura.</p>
+            <img src="./public/resenas02.jpg" alt="Leer reseñas">
+            <h3 class="coloText">Leer reseñas</h3>
+            <p class="coloText">Opiniones reales antes de elegir tu próxima lectura.</p>
             <a href="./resenas.html" class="card-link">Ver reseñas</a>
         </article>
 
         <article class="card">
-            <img src="./public/autores.jpg" alt="Descubrir autores">
-            <h3>Descubrir autores</h3>
-            <p>Encuentra nuevos escritores y sus obras.</p>
+            <img src="./public/autores02.jpg" alt="Descubrir autores">
+            <h3 class="coloText">Descubrir autores</h3>
+            <p class="coloText">Encuentra nuevos escritores y sus obras.</p>
             <a href="./autores.html" class="card-link">Ver autores</a>
         </article>
     </div>
@@ -94,16 +81,16 @@ document.querySelectorAll('#menu a').forEach(link => {
 
     <div class="cards">
         <div class="card libro">
-            <img src="./public/recomedables.jpg" alt="Libro destacado">
-            <h3>El nombre del viento</h3>
-            <p>Una historia épica llena de magia, aventuras y misterio que sigue la vida de Kvothe.</p>
+            <img src="./public/elNombreDelViento.jpg" alt="Libro destacado">
+            <h3 class="coloText">El nombre del viento</h3>
+            <p class="coloText">Una historia épica llena de magia, aventuras y misterio que sigue la vida de Kvothe.</p>
             <button>Ver más</button>
         </div>
 
         <div class="card libro">
-            <img src="./public/recomedables.jpg" alt="Libro destacado">
-            <h3>1984</h3>
-            <p>Una novela distópica que explora el control social y la vigilancia extrema.</p>
+            <img src="./public/1984.jpg" alt="Libro destacado">
+            <h3 class="coloText">1984</h3>
+            <p class="coloText">Una novela distópica que explora el control social y la vigilancia extrema.</p>
             <button>Ver más</button>
         </div>
     </div>
@@ -120,8 +107,9 @@ document.querySelectorAll('#menu a').forEach(link => {
             <div class="footer-section">
                 <h3>Síguenos</h3>
                 <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" class="social-icon">📷 Instagram</a>
-                    <a href="https://facebook.com" target="_blank" class="social-icon">👍 Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    
+                    <a href="https://www.tiktok.com/" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
                 </div>
             </div>
             <div class="footer-section">

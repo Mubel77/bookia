@@ -18,6 +18,8 @@ margin:auto;
 
 /* HEADER */
 
+/* HEADER */
+
 header{
 background:#386150;
 padding:15px 0;
@@ -32,12 +34,12 @@ align-items:center;
 }
 
 .logo{
-height:60px;
-width:60px;
-border-radius:50%;
-object-fit:cover;
-background:white;
-padding:5px;
+    height: 73px;
+    width: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    /* padding: 5px; */
 }
 
 nav ul{
@@ -50,14 +52,13 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
-transition:color 0.3s ease;
-}
-
-nav a:hover{
-color:#35AC78;
 }
 
 /* HAMBURGUESA */
+
+.menu-toggle{
+display:none;
+}
 
 .hamburguesa{
 display:none;
@@ -76,23 +77,19 @@ border-radius:3px;
 transition:all 0.3s ease;
 }
 
-.hamburguesa.active span:nth-child(1){
-transform:rotate(45deg) translate(12px, 12px);
+.menu-toggle:checked + .hamburguesa span:nth-child(1){
+transform:rotate(45deg) translate(6px, 6px);
 }
 
-.hamburguesa.active span:nth-child(2){
+.menu-toggle:checked + .hamburguesa span:nth-child(2){
 opacity:0;
 }
 
-.hamburguesa.active span:nth-child(3){
-transform:rotate(-45deg) translate(8px, -8px);
+.menu-toggle:checked + .hamburguesa span:nth-child(3){
+transform:rotate(-45deg) translate(6px, -6px);
 }
 
 nav{
-display:flex;
-}
-
-nav.active{
 display:flex;
 }
 
@@ -211,11 +208,12 @@ color:#386150;
 /* ESCRIBIR RESEÑA */
 
 .escribir-resena{
-padding:50px 0;
-background:#f9f9f9;
-margin:50px 0;
-border-radius:10px;
+width:90%;
+max-width:1200px;
+margin:50px auto;
 padding:40px;
+background:transparent;
+border-radius:10px;
 }
 
 .escribir-resena h2{
@@ -227,7 +225,9 @@ margin-bottom:30px;
 .resena-form{
 max-width:600px;
 margin:auto;
-background:white;
+background:
+  linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.78)),
+  url("../public/heroLibro.jpg") center/cover no-repeat;
 padding:30px;
 border-radius:10px;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
@@ -367,6 +367,10 @@ font-size:0.85em;
 
 @media(max-width:768px){
 
+.menu-toggle{
+display:none;
+}
+
 .hamburguesa{
 display:flex;
 }
@@ -386,7 +390,7 @@ border-top:1px solid rgba(255,255,255,0.12);
 box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-nav.active{
+.menu-toggle:checked + .hamburguesa + nav{
 display:flex;
 }
 

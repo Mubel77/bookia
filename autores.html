@@ -5,19 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Autores - Bookia</title>
 <link rel="stylesheet" href="./styles/autores.css">
+<link name="theme-color" rel="icon" type="image/png" sizes="200x200" href="./public/icons02.png">
+<script src="https://kit.fontawesome.com/76e1d0d53e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <header>
     <div class="container header-content">
-        <img src="./public/logo.jpeg" alt="Bookia Logo" class="logo">
+        <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
 
-        <button class="hamburguesa" id="menuToggle">
+        <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
+        <label for="menuToggle" class="hamburguesa" aria-label="Abrir menú">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </label>
 
         <nav id="menu">
             <ul>
@@ -25,27 +28,12 @@
                 <li><a href="./libros.html">Libros</a></li>
                 <li><a href="./resenas.html">Reseñas</a></li>
                 <li><a href="./autores.html">Autores</a></li>
-                <li><a href="./index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<script>
-document.getElementById('menuToggle').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-    this.classList.toggle('active');
-});
-
-// Cerrar menú al hacer clic en un link
-document.querySelectorAll('#menu a').forEach(link => {
-    link.addEventListener('click', function() {
-        document.getElementById('menu').classList.remove('active');
-        document.getElementById('menuToggle').classList.remove('active');
-    });
-});
-</script>
 
 <section class="hero-autores">
     <div class="container">
@@ -59,19 +47,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 1 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="Patrick Rothfuss" class="autor-imagen">
+                <img src="./public/elNombreDelViento.jpg" alt="Patrick Rothfuss" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Patrick Rothfuss</h2>
-                    <p class="nacionalidad">🌎 Estados Unidos</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i>Estados Unidos</p>
                 </div>
             </div>
             <p class="descripcion">Patrick Rothfuss es un aclamado escritor norteamericano conocido por su serie "The Kingkiller Chronicles", que combina fantasía épica con aventuras mágicas cautivantes. Sus historias destacan por su escritura poética y personajes profundamente desarrollados.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>El nombre del viento</li>
-                    <li>El miedo del hombre sabio</li>
-                    <li>Relatos de la Taberna del Camino</li>
+                    <li><i class="fa-solid fa-filter"></i>El nombre del viento</li>
+                    <li><i class="fa-solid fa-filter"></i>El miedo del hombre sabio</li>
+                    <li><i class="fa-solid fa-filter"></i>Relatos de la Taberna del Camino</li>
                 </ul>
             </div>
         </article>
@@ -79,19 +67,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 2 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="George Orwell" class="autor-imagen">
+                <img src="./public/1984.jpg" alt="George Orwell" class="autor-imagen">
                 <div class="autor-info">
                     <h2>George Orwell</h2>
-                    <p class="nacionalidad">🌎 Reino Unido</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
                 </div>
             </div>
             <p class="descripcion">George Orwell fue un escritor inglés de gran influencia que exploró temas de política, justicia social y distopía. Sus obras continúan siendo referencias fundamentales en la literatura moderna y en la crítica social.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>1984</li>
-                    <li>Granja de animales</li>
-                    <li>Rebelión en la granja</li>
+                    <li><i class="fa-solid fa-filter"></i>1984</li>
+                    <li><i class="fa-solid fa-filter"></i>Granja de animales</li>
+                    <li><i class="fa-solid fa-filter"></i>Rebelión en la granja</li>
                 </ul>
             </div>
         </article>
@@ -99,19 +87,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 3 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="Dan Brown" class="autor-imagen">
+                <img src="./public/davinci.webp" alt="Dan Brown" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Dan Brown</h2>
-                    <p class="nacionalidad">🌎 Estados Unidos</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i> Estados Unidos</p>
                 </div>
             </div>
             <p class="descripcion">Dan Brown es un bestseller internacional conocido por sus novelas de misterio y suspenso. Sus libros combinan elementos históricos, religiosos y artísticos con tramas complejas que mantienen a los lectores en vilo.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>El código Da Vinci</li>
-                    <li>Ángeles y demonios</li>
-                    <li>La fortaleza digital</li>
+                    <li><i class="fa-solid fa-filter"></i>El código Da Vinci</li>
+                    <li><i class="fa-solid fa-filter"></i>Ángeles y demonios</li>
+                    <li><i class="fa-solid fa-filter"></i>La fortaleza digital</li>
                 </ul>
             </div>
         </article>
@@ -119,19 +107,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 4 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="Jane Austen" class="autor-imagen">
+                <img src="./public/orgullo.webp" alt="Jane Austen" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Jane Austen</h2>
-                    <p class="nacionalidad">🌎 Reino Unido</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
                 </div>
             </div>
             <p class="descripcion">Jane Austen fue una novelista inglesa clásica que revolucionó el género romántico. Sus obras están llenas de humor, crítica social y romances cautivadores que siguen siendo bellos y relevantes después de más de dos siglos.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>Orgullo y prejuicio</li>
-                    <li>Emma</li>
-                    <li>Sentido y sensibilidad</li>
+                    <li><i class="fa-solid fa-filter"></i>Orgullo y prejuicio</li>
+                    <li><i class="fa-solid fa-filter"></i>Emma</li>
+                    <li><i class="fa-solid fa-filter"></i>Sentido y sensibilidad</li>
                 </ul>
             </div>
         </article>
@@ -139,19 +127,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 5 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="Robert Louis Stevenson" class="autor-imagen">
+                <img src="./public/islaDelTesoro.webp" alt="Robert Louis Stevenson" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Robert Louis Stevenson</h2>
-                    <p class="nacionalidad">🌎 Escocia</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i> Escocia</p>
                 </div>
             </div>
             <p class="descripcion">Robert Louis Stevenson fue un escritor escocés que dejó un legado de aventureros, piratas y personajes memorables. Su prosa vivida y sus tramas emocionantes han inspirado innumerables adaptaciones y continúan fascinar a lectores de todas las edades.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>La isla del tesoro</li>
-                    <li>El extraño caso del Dr. Jekyll y Mr. Hyde</li>
-                    <li>Sécuestro</li>
+                    <li><i class="fa-solid fa-filter"></i>La isla del tesoro</li>
+                    <li><i class="fa-solid fa-filter"></i>El extraño caso del Dr. Jekyll y Mr. Hyde</li>
+                    <li><i class="fa-solid fa-filter"></i>Sécuestro</li>
                 </ul>
             </div>
         </article>
@@ -159,19 +147,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 6 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="J.K. Rowling" class="autor-imagen">
+                <img src="./public/harry.webp" alt="J.K. Rowling" class="autor-imagen">
                 <div class="autor-info">
                     <h2>J.K. Rowling</h2>
-                    <p class="nacionalidad">🌎 Reino Unido</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
                 </div>
             </div>
             <p class="descripcion">J.K. Rowling, autora británica, revolucionó la literatura infantil con su serie de Harry Potter. Su universo mágico y personajes entrañables han cautivado a millones de lectores alrededor del mundo, ganando reconocimiento global.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>Harry Potter y la Piedra Filosofal</li>
-                    <li>Harry Potter y la Cámara Secreta</li>
-                    <li>Harry Potter y el Prisionero de Azkaban</li>
+                    <li><i class="fa-solid fa-filter"></i>Harry Potter y la Piedra Filosofal</li>
+                    <li><i class="fa-solid fa-filter"></i>Harry Potter y la Cámara Secreta</li>
+                    <li><i class="fa-solid fa-filter"></i   >Harry Potter y el Prisionero de Azkaban</li>
                 </ul>
             </div>
         </article>
@@ -179,19 +167,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 7 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="Gabriel García Márquez" class="autor-imagen">
+                <img src="./public/100.webp" alt="Gabriel García Márquez" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Gabriel García Márquez</h2>
-                    <p class="nacionalidad">🌎 Colombia</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i> Colombia</p>
                 </div>
             </div>
             <p class="descripcion">Gabriel García Márquez fue un autor latinoamericano de renombre mundial, ganador del Premio Nobel de Literatura. Su estilo del "realismo mágico" mezcla elementos fantásticos con la realidad cotidiana de forma única y profunda.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>Cien años de soledad</li>
-                    <li>El amor en los tiempos de cólera</li>
-                    <li>Vivir para contarla</li>
+                    <li><i class="fa-solid fa-filter"></i>Cien años de soledad</li>
+                    <li><i class="fa-solid fa-filter"></i>El amor en los tiempos de cólera</li>
+                    <li><i class="fa-solid fa-filter"></i>Vivir para contarla</li>
                 </ul>
             </div>
         </article>
@@ -199,19 +187,19 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Autor 8 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/recomedables.jpg" alt="Arthur Conan Doyle" class="autor-imagen">
+                <img src="./public/perro.webp" alt="Arthur Conan Doyle" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Arthur Conan Doyle</h2>
-                    <p class="nacionalidad">🌎 Reino Unido</p>
+                    <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
                 </div>
             </div>
             <p class="descripcion">Arthur Conan Doyle fue creador del famoso detective Sherlock Holmes, personaje que revolucionó la novela de misterio. Sus historias de deducción lógica y detectives inteligentes continúan siendo modelo para generaciones de escritores.</p>
             <div class="libros-autor">
                 <h3>Obras destacadas:</h3>
                 <ul>
-                    <li>El perro de los Baskerville</li>
-                    <li>Estudio en escarlata</li>
-                    <li>Las aventuras de Sherlock Holmes</li>
+                    <li><i class="fa-solid fa-filter"></i>El perro de los Baskerville</li>
+                    <li><i class="fa-solid fa-filter"></i>Estudio en escarlata</li>
+                    <li><i class="fa-solid fa-filter"></i>Las aventuras de Sherlock Holmes</li>
                 </ul>
             </div>
         </article>
@@ -224,13 +212,14 @@ document.querySelectorAll('#menu a').forEach(link => {
             <div class="footer-section">
                 <h3>Bookia</h3>
                 <p>Tu mundo de lectura online</p>
-                <p>Email: contacto@bookia.com</p>
+                <p> Contacto contacto@bookia.com</p>
             </div>
             <div class="footer-section">
                 <h3>Síguenos</h3>
                 <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" class="social-icon">📷 Instagram</a>
-                    <a href="https://facebook.com" target="_blank" class="social-icon">👍 Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    
+                    <a href="https://www.tiktok.com/" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
                 </div>
             </div>
             <div class="footer-section">

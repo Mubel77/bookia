@@ -32,12 +32,12 @@ align-items:center;
 }
 
 .logo{
-height:60px;
-width:60px;
-border-radius:50%;
-object-fit:cover;
-background:white;
-padding:5px;
+    height: 73px;
+    width: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
+    /* padding: 5px; */
 }
 
 nav ul{
@@ -50,14 +50,14 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
-transition:color 0.3s ease;
-}
-
-nav a:hover{
-color:#35AC78;
 }
 
 /* HAMBURGUESA */
+/* HAMBURGUESA */
+
+.menu-toggle{
+display:none;
+}
 
 .hamburguesa{
 display:none;
@@ -76,23 +76,19 @@ border-radius:3px;
 transition:all 0.3s ease;
 }
 
-.hamburguesa.active span:nth-child(1){
-transform:rotate(45deg) translate(12px, 12px);
+.menu-toggle:checked + .hamburguesa span:nth-child(1){
+transform:rotate(45deg) translate(6px, 6px);
 }
 
-.hamburguesa.active span:nth-child(2){
+.menu-toggle:checked + .hamburguesa span:nth-child(2){
 opacity:0;
 }
 
-.hamburguesa.active span:nth-child(3){
-transform:rotate(-45deg) translate(8px, -8px);
+.menu-toggle:checked + .hamburguesa span:nth-child(3){
+transform:rotate(-45deg) translate(6px, -6px);
 }
 
 nav{
-display:flex;
-}
-
-nav.active{
 display:flex;
 }
 
@@ -207,9 +203,7 @@ border-left:3px solid #35AC78;
 color:#555;
 }
 
-.libros-autor li:before{
-content:"📚 ";
-}
+
 
 /* FOOTER */
 
@@ -298,6 +292,10 @@ font-size:0.85em;
 
 @media(max-width:768px){
 
+.menu-toggle{
+display:none;
+}
+
 .hamburguesa{
 display:flex;
 }
@@ -317,7 +315,7 @@ border-top:1px solid rgba(255,255,255,0.12);
 box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
 
-nav.active{
+.menu-toggle:checked + .hamburguesa + nav{
 display:flex;
 }
 

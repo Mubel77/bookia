@@ -5,19 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Libros - Bookia</title>
 <link rel="stylesheet" href="./styles/libros.css">
+
+<link name="theme-color" rel="icon" type="image/png" sizes="200x200" href="./public/icons02.png">
+<script src="https://kit.fontawesome.com/76e1d0d53e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
 <header>
     <div class="container header-content">
-        <img src="./public/logo.jpeg" alt="Bookia Logo" class="logo">
+        <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
 
-        <button class="hamburguesa" id="menuToggle">
+        <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
+        <label for="menuToggle" class="hamburguesa" aria-label="Abrir menú">
             <span></span>
             <span></span>
             <span></span>
-        </button>
+        </label>
 
         <nav id="menu">
             <ul>
@@ -25,27 +29,12 @@
                 <li><a href="./libros.html">Libros</a></li>
                 <li><a href="./resenas.html">Reseñas</a></li>
                 <li><a href="./autores.html">Autores</a></li>
-                <li><a href="./index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<script>
-document.getElementById('menuToggle').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
-    this.classList.toggle('active');
-});
-
-// Cerrar menú al hacer clic en un link
-document.querySelectorAll('#menu a').forEach(link => {
-    link.addEventListener('click', function() {
-        document.getElementById('menu').classList.remove('active');
-        document.getElementById('menuToggle').classList.remove('active');
-    });
-});
-</script>
 
 <section class="hero-libros">
     <div class="container">
@@ -57,12 +46,12 @@ document.querySelectorAll('#menu a').forEach(link => {
 <section class="filtros container">
     <h2>Filtrar por categoría</h2>
     <div class="filtros-buttons">
-        <button class="filtro-btn active" onclick="filtrarLibros('todos')">Todos</button>
-        <button class="filtro-btn" onclick="filtrarLibros('ficcion')">Ficción</button>
-        <button class="filtro-btn" onclick="filtrarLibros('misterio')">Misterio</button>
-        <button class="filtro-btn" onclick="filtrarLibros('romance')">Romance</button>
-        <button class="filtro-btn" onclick="filtrarLibros('aventura')">Aventura</button>
-        <button class="filtro-btn" onclick="filtrarLibros('fantasia')">Fantasía</button>
+        <button class="filtro-btn active">Todos</button>
+        <button class="filtro-btn">Ficción</button>
+        <button class="filtro-btn">Misterio</button>
+        <button class="filtro-btn">Romance</button>
+        <button class="filtro-btn">Aventura</button>
+        <button class="filtro-btn">Fantasía</button>
     </div>
 </section>
 
@@ -71,7 +60,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 1 -->
         <div class="libro-card" data-categoria="fantasia">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="El nombre del viento">
+                <img src="./public/elNombreDelViento.jpg" alt="El nombre del viento">
             </div>
             <div class="libro-contenido">
                 <h3>El nombre del viento</h3>
@@ -87,7 +76,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 2 -->
         <div class="libro-card" data-categoria="ficcion">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="1984">
+                <img src="./public/1984.jpg" alt="1984">
             </div>
             <div class="libro-contenido">
                 <h3>1984</h3>
@@ -103,7 +92,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 3 -->
         <div class="libro-card" data-categoria="misterio">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="El código Da Vinci">
+                <img src="./public/davinci.webp" alt="El código Da Vinci">
             </div>
             <div class="libro-contenido">
                 <h3>El código Da Vinci</h3>
@@ -119,7 +108,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 4 -->
         <div class="libro-card" data-categoria="romance">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="Orgullo y prejuicio">
+                <img src="./public/orgullo.webp" alt="Orgullo y prejuicio">
             </div>
             <div class="libro-contenido">
                 <h3>Orgullo y prejuicio</h3>
@@ -135,7 +124,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 5 -->
         <div class="libro-card" data-categoria="aventura">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="La isla del tesoro">
+                <img src="./public/islaDelTesoro.webp" alt="La isla del tesoro">
             </div>
             <div class="libro-contenido">
                 <h3>La isla del tesoro</h3>
@@ -151,7 +140,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 6 -->
         <div class="libro-card" data-categoria="fantasia">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="Harry Potter">
+                <img src="./public/harry.webp" alt="Harry Potter">
             </div>
             <div class="libro-contenido">
                 <h3>Harry Potter y la Piedra Filosofal</h3>
@@ -167,7 +156,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 7 -->
         <div class="libro-card" data-categoria="ficcion">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="Cien años de soledad">
+                <img src="./public/100.webp" alt="Cien años de soledad">
             </div>
             <div class="libro-contenido">
                 <h3>Cien años de soledad</h3>
@@ -183,7 +172,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 8 -->
         <div class="libro-card" data-categoria="misterio">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="Sherlock Holmes">
+                <img src="./public/perro.webp" alt="Sherlock Holmes">
             </div>
             <div class="libro-contenido">
                 <h3>El perro de los Baskerville</h3>
@@ -199,7 +188,7 @@ document.querySelectorAll('#menu a').forEach(link => {
         <!-- Libro 9 -->
         <div class="libro-card" data-categoria="romance">
             <div class="libro-imagen">
-                <img src="./public/recomedables.jpg" alt="Jane Eyre">
+                <img src="./public/jayne.webp" alt="Jane Eyre">
             </div>
             <div class="libro-contenido">
                 <h3>Jane Eyre</h3>
@@ -220,13 +209,14 @@ document.querySelectorAll('#menu a').forEach(link => {
             <div class="footer-section">
                 <h3>Bookia</h3>
                 <p>Tu mundo de lectura online</p>
-                <p>Email: contacto@bookia.com</p>
+                <p> Contacto contacto@bookia.com</p>
             </div>
             <div class="footer-section">
                 <h3>Síguenos</h3>
                 <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" class="social-icon">📷 Instagram</a>
-                    <a href="https://facebook.com" target="_blank" class="social-icon">👍 Facebook</a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    
+                    <a href="https://www.tiktok.com/" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i>Tiktok</a>
                 </div>
             </div>
             <div class="footer-section">
@@ -243,34 +233,6 @@ document.querySelectorAll('#menu a').forEach(link => {
     </div>
 </footer>
 
-<script>
-function filtrarLibros(categoria) {
-    const tarjetas = document.querySelectorAll('.libro-card');
-    const botones = document.querySelectorAll('.filtro-btn');
-    
-    botones.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
-    tarjetas.forEach(tarjeta => {
-        if(categoria === 'todos' || tarjeta.dataset.categoria === categoria) {
-            tarjeta.style.display = 'block';
-            setTimeout(() => {
-                tarjeta.classList.add('visible');
-            }, 10);
-        } else {
-            tarjeta.style.display = 'none';
-            tarjeta.classList.remove('visible');
-        }
-    });
-}
-
-// Mostrar todos los libros al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.libro-card').forEach(tarjeta => {
-        tarjeta.classList.add('visible');
-    });
-});
-</script>
 
 </body>
 </html>
