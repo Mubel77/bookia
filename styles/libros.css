@@ -16,12 +16,10 @@ color:#333;
 h1, h2, h3, h4, h5, h6 {
 font-family: 'Libre Baskerville', serif;
 }
-}
 
 .container{
-width:90%;
-max-width:1200px;
-margin:auto;
+width:min(1200px, calc(100% - 40px));
+margin:0 auto;
 }
 
 /* HEADER */
@@ -60,6 +58,11 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:bold;
+transition: color 0.3s ease;
+}
+
+nav a:hover{
+color:#35AC78;
 }
 
 /* HAMBURGUESA */
@@ -163,7 +166,7 @@ color:white;
 /* LIBROS CONTAINER */
 
 .libros-container{
-padding:50px 0;
+padding:50px 20px;
 }
 
 .libros-grid{
@@ -220,7 +223,7 @@ transform:scale(1.05);
 padding:20px;
 display:flex;
 flex-direction:column;
-height:280px;
+min-height:280px;
 }
 
 .libro-contenido h3 {
