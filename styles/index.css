@@ -75,6 +75,11 @@ background:#35AC78;
 color:white;
 cursor:pointer;
 border-radius:5px;
+transition: background 0.3s ease;
+}
+
+.hero button:hover{
+background:#2a8a5d;
 }
 .fondo-imagen-hero{
 background-image:url("./../public/heroLibro.jpg");
@@ -138,6 +143,11 @@ background:#35AC78;
 color:white;
 border-radius:5px;
 cursor:pointer;
+transition: background 0.3s ease;
+}
+
+.card button:hover{
+background:#2a8a5d;
 }
 
 .card-link{
