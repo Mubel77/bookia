@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bookia - Tu mundo de lectura online</title>
 <link rel="stylesheet" href="./styles/index.css">
+<link rel="stylesheet" href="./styles/shared.css">
 <link name="theme-color" rel="icon" type="image/png" sizes="200x200" href="./public/icons02.png">
 <script src="https://kit.fontawesome.com/76e1d0d53e.js" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +14,9 @@
 
 <header>
     <div class="container header-content">
-        <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        <a href="./index.html" class="logo-link" aria-label="Ir a la página principal">
+            <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        </a>
 
         <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
         <label for="menuToggle" class="hamburguesa" aria-label="Abrir menú">
@@ -36,38 +39,36 @@
 
 <section class="hero fondo-imagen-hero">
     <div class="container overlay-hero">
-        <h1>Descubre tu próxima lectura Explora libros,</h1>
-        <p>reseñas y recomendaciones personalizadas</p>
-        <a href="./libros.html"><button>Explorar libros</button></a>
+        <h1>Descubre tu próxima lectura</h1>
+        <p>Explora libros, reseñas y recomendaciones personalizadas</p>
+    </div>
+
+    <div class="container servicios">
+        <div class="cards">
+            <article class="card card-icon">
+                <i class="fas fa-book"></i>
+                <h3>Explorar libros</h3>
+                <p>Descubre libros por categoría y estilo literario.</p>
+                <a href="./libros.html" class="card-link">Ver libros</a>
+            </article>
+
+            <article class="card card-icon">
+                <i class="fas fa-star"></i>
+                <h3>Leer reseñas</h3>
+                <p>Opiniones reales antes de elegir tu próxima lectura.</p>
+                <a href="./resenas.html" class="card-link">Ver reseñas</a>
+            </article>
+
+            <article class="card card-icon">
+                <i class="fas fa-pen-fancy"></i>
+                <h3>Descubrir autores</h3>
+                <p>Encuentra nuevos escritores y sus obras.</p>
+                <a href="./autores.html" class="card-link">Ver autores</a>
+            </article>
+        </div>
     </div>
 </section>
 
-<section class="servicios container">
-    <h2>¿Qué puedes hacer en Bookia?</h2>
-
-    <div class="cards">
-        <article class="card">
-            <img src="./public/libros02.jpg" alt="Explorar libros">
-            <h3 class="coloText">Explorar libros</h3>
-            <p class="coloText">Descubre libros por categoría y estilo literario.</p>
-            <a href="./libros.html" class="card-link">Ver libros</a>
-        </article>
-
-        <article class="card">
-            <img src="./public/resenas02.jpg" alt="Leer reseñas">
-            <h3 class="coloText">Leer reseñas</h3>
-            <p class="coloText">Opiniones reales antes de elegir tu próxima lectura.</p>
-            <a href="./resenas.html" class="card-link">Ver reseñas</a>
-        </article>
-
-        <article class="card">
-            <img src="./public/autores02.jpg" alt="Descubrir autores">
-            <h3 class="coloText">Descubrir autores</h3>
-            <p class="coloText">Encuentra nuevos escritores y sus obras.</p>
-            <a href="./autores.html" class="card-link">Ver autores</a>
-        </article>
-    </div>
-</section>
 
 <section class="fondo-imagen">
     <div class="overlay">
@@ -77,21 +78,27 @@
 </section>
 
 <section class="recomendados container">
-    <h2>Libros recomendados</h2>
+    <div class="recomendados-header">
+        <h2> * Libros mejor Valorados</h2>
+        <span class="separator-icon"><i class="fas fa-book"></i></span>
+        <h4><a href="./libros.html">Conoce todos nuestros libros</a></h4>
+    </div>
 
     <div class="cards">
         <div class="card libro">
-            <img src="./public/elNombreDelViento.jpg" alt="Libro destacado">
-            <h3 class="coloText">El nombre del viento</h3>
-            <p class="coloText">Una historia épica llena de magia, aventuras y misterio que sigue la vida de Kvothe.</p>
-            <a href="./libros.html"><button>Ver más</button></a>
+            <img src="./public/84913f0b-35fd-4023-86c9-927cd7d24de1.jfif" alt="Libro destacado">
+            <h3>El nombre del viento</h3>
+            <p>Una historia épica llena de magia, aventuras y misterio que sigue la vida de Kvothe.</p>
+            <p class="rating"><i class="fas fa-star"></i> 9/10</p>
+            <a href="./resenas.html" class="card-button">Ver reseñas</a>
         </div>
 
         <div class="card libro">
-            <img src="./public/1984.jpg" alt="Libro destacado">
-            <h3 class="coloText">1984</h3>
-            <p class="coloText">Una novela distópica que explora el control social y la vigilancia extrema.</p>
-            <a href="./libros.html"><button>Ver más</button></a>
+            <img src="./public/watermarked_img_7098192522300868629.jpg" alt="Libro destacado">
+            <h3>1984</h3>
+            <p>Una novela distópica que explora el control social y la vigilancia extrema.</p>
+            <p class="rating"><i class="fas fa-star"></i> 10/10</p>
+            <a href="./resenas.html" class="card-button">Ver reseñas</a>
         </div>
     </div>
 </section>
@@ -126,5 +133,6 @@
     </div>
 </footer>
 
+<script src="./animaciones.js"></script>
 </body>
 </html>

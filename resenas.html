@@ -7,13 +7,16 @@
 <link name="theme-color" rel="icon" type="image/png" sizes="200x200" href="./public/icons02.png">
 <script src="https://kit.fontawesome.com/76e1d0d53e.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="./styles/resenas.css">
+<link rel="stylesheet" href="./styles/shared.css">
 </head>
 
 <body>
 
 <header>
     <div class="container header-content">
-        <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        <a href="./index.html" class="logo-link" aria-label="Ir a la página principal">
+            <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        </a>
 
         <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
         <label for="menuToggle" class="hamburguesa" aria-label="Abrir menú">
@@ -49,7 +52,7 @@
         <!-- Reseña 1 -->
         <article class="resena-card">
             <div class="resena-header">
-                <img src="./public/elNombreDelViento.jpg " alt="Libro">
+                <img src="./public/elNombreDelViento.jpg" alt="Libro">
                 <div class="resena-info">
                     <h3>El nombre del viento</h3>
                     <p class="autor">Patrick Rothfuss</p>
@@ -248,6 +251,7 @@
     </div>
 </footer>
 
+<script src="./animaciones.js"></script>
 <script src="./javascript.js"></script>
 </body>
 </html>

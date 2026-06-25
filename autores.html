@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Autores - Bookia</title>
 <link rel="stylesheet" href="./styles/autores.css">
+<link rel="stylesheet" href="./styles/shared.css">
 <link name="theme-color" rel="icon" type="image/png" sizes="200x200" href="./public/icons02.png">
 <script src="https://kit.fontawesome.com/76e1d0d53e.js" crossorigin="anonymous"></script>
 </head>
@@ -13,7 +14,9 @@
 
 <header>
     <div class="container header-content">
-        <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        <a href="./index.html" class="logo-link" aria-label="Ir a la página principal">
+            <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        </a>
 
         <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
         <label for="menuToggle" class="hamburguesa" aria-label="Abrir menú">
@@ -47,7 +50,7 @@
         <!-- Autor 1 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/elNombreDelViento.jpg" alt="Patrick Rothfuss" class="autor-imagen">
+                <img src="./public/Patrick.jpeg" alt="Patrick Rothfuss" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Patrick Rothfuss</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i>Estados Unidos</p>
@@ -67,7 +70,7 @@
         <!-- Autor 2 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/1984.jpg" alt="George Orwell" class="autor-imagen">
+                <img src="./public/Orwell.jpeg" alt="George Orwell" class="autor-imagen">
                 <div class="autor-info">
                     <h2>George Orwell</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
@@ -87,7 +90,7 @@
         <!-- Autor 3 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/davinci.webp" alt="Dan Brown" class="autor-imagen">
+                <img src="./public/Dan.jpeg" alt="Dan Brown" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Dan Brown</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i> Estados Unidos</p>
@@ -107,7 +110,7 @@
         <!-- Autor 4 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/orgullo.webp" alt="Jane Austen" class="autor-imagen">
+                <img src="./public/Jane.jpeg" alt="Jane Austen" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Jane Austen</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
@@ -127,7 +130,7 @@
         <!-- Autor 5 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/islaDelTesoro.webp" alt="Robert Louis Stevenson" class="autor-imagen">
+                <img src="./public/Stevenson.jpeg" alt="Robert Louis Stevenson" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Robert Louis Stevenson</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i> Escocia</p>
@@ -147,7 +150,7 @@
         <!-- Autor 6 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/harry.webp" alt="J.K. Rowling" class="autor-imagen">
+                <img src="./public/Rowling.jpeg" alt="J.K. Rowling" class="autor-imagen">
                 <div class="autor-info">
                     <h2>J.K. Rowling</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
@@ -159,7 +162,7 @@
                 <ul>
                     <li><i class="fa-solid fa-filter"></i>Harry Potter y la Piedra Filosofal</li>
                     <li><i class="fa-solid fa-filter"></i>Harry Potter y la Cámara Secreta</li>
-                    <li><i class="fa-solid fa-filter"></i   >Harry Potter y el Prisionero de Azkaban</li>
+                    <li><i class="fa-solid fa-filter"></i> Harry Potter y el Prisionero de Azkaban</li>
                 </ul>
             </div>
         </article>
@@ -167,7 +170,7 @@
         <!-- Autor 7 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/100.webp" alt="Gabriel García Márquez" class="autor-imagen">
+                <img src="./public/Marquez.jpeg" alt="Gabriel García Márquez" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Gabriel García Márquez</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i> Colombia</p>
@@ -187,7 +190,7 @@
         <!-- Autor 8 -->
         <article class="autor-card">
             <div class="autor-header">
-                <img src="./public/perro.webp" alt="Arthur Conan Doyle" class="autor-imagen">
+                <img src="./public/Arthur.jpeg" alt="Arthur Conan Doyle" class="autor-imagen">
                 <div class="autor-info">
                     <h2>Arthur Conan Doyle</h2>
                     <p class="nacionalidad"><i class="fa-solid fa-map"></i> Reino Unido</p>
@@ -236,5 +239,6 @@
     </div>
 </footer>
 
+<script src="./animaciones.js"></script>
 </body>
 </html>

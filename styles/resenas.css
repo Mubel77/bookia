@@ -126,7 +126,7 @@ font-size:1.2em;
 /* RESENAS CONTAINER */
 
 .resenas-container{
-padding:50px 20px;
+padding:30px 2px;
 }
 
 .resenas-container h2{
@@ -145,7 +145,7 @@ gap:25px;
 .resena-card{
 background:white;
 border-radius:12px;
-padding:25px;
+padding:20px;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
 transition:all 0.3s ease;
 border-top:4px solid #35AC78;
@@ -235,7 +235,7 @@ margin-bottom:30px;
 }
 
 .resena-form{
-max-width:600px;
+max-width:100%;
 margin:auto;
 background:
   linear-gradient(rgba(255,255,255,0.78), rgba(255,255,255,0.78)),
@@ -243,10 +243,19 @@ background:
 padding:30px;
 border-radius:10px;
 box-shadow:0 4px 15px rgba(0,0,0,0.1);
+display:grid;
+grid-template-columns:repeat(2, 1fr);
+gap:20px;
 }
 
 .form-group{
-margin-bottom:20px;
+margin-bottom:0;
+}
+
+.form-group:nth-child(3),
+.form-group:nth-child(4),
+.form-group:nth-child(5){
+grid-column:1/-1;
 }
 
 .form-group label{
@@ -286,6 +295,7 @@ font-weight:bold;
 cursor:pointer;
 transition:background 0.3s ease;
 font-size:1em;
+grid-column:1/-1;
 }
 
 .btn-submit:hover{
@@ -297,7 +307,6 @@ background:#2a8a5d;
 footer{
 background:#386150;
 color:white;
-padding:40px 0;
 margin-top:40px;
 }
 
@@ -493,6 +502,13 @@ padding:30px 20px;
 
 .resena-form{
 padding:20px;
+grid-template-columns:1fr;
+}
+
+.form-group:nth-child(3),
+.form-group:nth-child(4),
+.form-group:nth-child(5){
+grid-column:auto;
 }
 
 }

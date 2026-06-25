@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Libros - Bookia</title>
 <link rel="stylesheet" href="./styles/libros.css">
-
+<link rel="stylesheet" href="./styles/shared.css">
 <link name="theme-color" rel="icon" type="image/png" sizes="200x200" href="./public/icons02.png">
 <script src="https://kit.fontawesome.com/76e1d0d53e.js" crossorigin="anonymous"></script>
 </head>
@@ -14,7 +14,9 @@
 
 <header>
     <div class="container header-content">
-        <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        <a href="./index.html" class="logo-link" aria-label="Ir a la página principal">
+            <img src="./public/logo02.png" alt="Bookia Logo" class="logo">
+        </a>
 
         <input type="checkbox" id="menuToggle" class="menu-toggle" aria-label="Abrir menú">
         <label for="menuToggle" class="hamburguesa" aria-label="Abrir menú">
@@ -46,12 +48,12 @@
 <section class="filtros container">
     <h2>Filtrar por categoría</h2>
     <div class="filtros-buttons">
-        <button class="filtro-btn active">Todos</button>
-        <button class="filtro-btn">Ficción</button>
-        <button class="filtro-btn">Misterio</button>
-        <button class="filtro-btn">Romance</button>
-        <button class="filtro-btn">Aventura</button>
-        <button class="filtro-btn">Fantasía</button>
+        <button class="filtro-btn active" data-categoria="todos">Todos</button>
+        <button class="filtro-btn" data-categoria="ciencia-ficcion">Ciencia Ficción</button>
+        <button class="filtro-btn" data-categoria="misterio">Misterio</button>
+        <button class="filtro-btn" data-categoria="romance">Romance</button>
+        <button class="filtro-btn" data-categoria="aventura">Aventura</button>
+        <button class="filtro-btn" data-categoria="fantasia">Fantasía</button>
     </div>
     <div id="mensaje-filtro" style="display: none; text-align: center; color: #386150; margin-top: 20px; font-size: 1.1em; font-weight: bold;"></div>
 </section>
@@ -60,31 +62,31 @@
     <div class="libros-grid">
         <!-- Libro 1 -->
         <div class="libro-card" data-categoria="fantasia">
+            <span class="categoria-tag">Fantasía</span>
             <div class="libro-imagen">
-                <img src="./public/elNombreDelViento.jpg" alt="El nombre del viento">
+                <img src="./public/84913f0b-35fd-4023-86c9-927cd7d24de1.jfif" alt="El nombre del viento">
             </div>
             <div class="libro-contenido">
                 <h3>El nombre del viento</h3>
                 <p class="autor">Patrick Rothfuss</p>
                 <p class="descripcion">Una historia épica llena de magia, aventuras y misterio que sigue la vida de Kvothe, un talentoso mago que relata su extraordinaria historia.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Fantasía</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
         </div>
 
         <!-- Libro 2 -->
-        <div class="libro-card" data-categoria="ficcion">
+        <div class="libro-card" data-categoria="ciencia-ficcion">
+            <span class="categoria-tag">Ciencia Ficción</span>
             <div class="libro-imagen">
-                <img src="./public/1984.jpg" alt="1984">
+                <img src="./public/watermarked_img_7098192522300868629.jpg" alt="1984">
             </div>
             <div class="libro-contenido">
                 <h3>1984</h3>
                 <p class="autor">George Orwell</p>
                 <p class="descripcion">Una novela distópica que explora el control social y la vigilancia extrema en un futuro sombrío donde el gobierno controla todo.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Ficción</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
@@ -92,6 +94,7 @@
 
         <!-- Libro 3 -->
         <div class="libro-card" data-categoria="misterio">
+            <span class="categoria-tag">Misterio</span>
             <div class="libro-imagen">
                 <img src="./public/davinci.webp" alt="El código Da Vinci">
             </div>
@@ -100,7 +103,6 @@
                 <p class="autor">Dan Brown</p>
                 <p class="descripcion">Una emocionante aventura de misterio y secretos junto a Robert Langdon, quien descubre conspiraciones ocultas en el arte antiguo.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Misterio</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
@@ -108,6 +110,7 @@
 
         <!-- Libro 4 -->
         <div class="libro-card" data-categoria="romance">
+            <span class="categoria-tag">Romance</span>
             <div class="libro-imagen">
                 <img src="./public/orgullo.webp" alt="Orgullo y prejuicio">
             </div>
@@ -116,7 +119,6 @@
                 <p class="autor">Jane Austen</p>
                 <p class="descripcion">Un clásico de la literatura que cuenta la historia de Elizabeth Bennet y Mr. Darcy en una sociedad donde el amor y las convenciones sociales chocan.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Romance</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
@@ -124,6 +126,7 @@
 
         <!-- Libro 5 -->
         <div class="libro-card" data-categoria="aventura">
+            <span class="categoria-tag">Aventura</span>
             <div class="libro-imagen">
                 <img src="./public/islaDelTesoro.webp" alt="La isla del tesoro">
             </div>
@@ -132,7 +135,6 @@
                 <p class="autor">Robert Louis Stevenson</p>
                 <p class="descripcion">Una aventura clásica de piratas y tesoros escondidos que sigue a Jim Hawkins en su emocionante viaje por los mares en busca de riquezas.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Aventura</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
@@ -140,6 +142,7 @@
 
         <!-- Libro 6 -->
         <div class="libro-card" data-categoria="fantasia">
+            <span class="categoria-tag">Fantasía</span>
             <div class="libro-imagen">
                 <img src="./public/harry.webp" alt="Harry Potter">
             </div>
@@ -148,14 +151,14 @@
                 <p class="autor">J.K. Rowling</p>
                 <p class="descripcion">El inicio de la saga que revolucionó la literatura infantil, donde un joven mago descubre un mundo mágico lleno de misterios y peligros.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Fantasía</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
         </div>
 
         <!-- Libro 7 -->
-        <div class="libro-card" data-categoria="ficcion">
+        <div class="libro-card" data-categoria="ciencia-ficcion">
+            <span class="categoria-tag">Ciencia Ficción</span>
             <div class="libro-imagen">
                 <img src="./public/100.webp" alt="Cien años de soledad">
             </div>
@@ -164,7 +167,6 @@
                 <p class="autor">Gabriel García Márquez</p>
                 <p class="descripcion">Una obra maestra de la literatura latinoamericana que narra la historia de varias generaciones de la familia Buendía en el pueblo ficticio de Macondo.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Ficción</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
@@ -172,6 +174,7 @@
 
         <!-- Libro 8 -->
         <div class="libro-card" data-categoria="misterio">
+            <span class="categoria-tag">Misterio</span>
             <div class="libro-imagen">
                 <img src="./public/perro.webp" alt="Sherlock Holmes">
             </div>
@@ -180,7 +183,6 @@
                 <p class="autor">Arthur Conan Doyle</p>
                 <p class="descripcion">Una novela de misterio clásica donde Sherlock Holmes investiga la maldición de la familia Baskerville en los páramos de Devon.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Misterio</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
@@ -188,6 +190,7 @@
 
         <!-- Libro 9 -->
         <div class="libro-card" data-categoria="romance">
+            <span class="categoria-tag">Romance</span>
             <div class="libro-imagen">
                 <img src="./public/jayne.webp" alt="Jane Eyre">
             </div>
@@ -196,7 +199,6 @@
                 <p class="autor">Charlotte Brontë</p>
                 <p class="descripcion">La historia apasionante de una joven independiente que lucha por su libertad y amor en la sociedad victoriana, enfrentando enormes obstáculos.</p>
                 <div class="libro-footer">
-                    <span class="categoria-tag">Romance</span>
                     <a href="./resenas.html" class="btn-resena">Ver reseña</a>
                 </div>
             </div>
@@ -234,6 +236,7 @@
     </div>
 </footer>
 
-<script src="./script.js"></script>
+<script src="./animaciones.js"></script>
+<script src="./javascript.js"></script>
 </body>
 </html>
